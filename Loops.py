@@ -60,3 +60,30 @@
 #     if i%5!=0:
 #         print(i)
 
+# Break Continue and Pass
+
+# av=4
+# x=int(input())
+# i=1
+# while i<=x:
+#     if i>av:
+#         print("Out of stock")
+#         break
+#     print("we have candy")
+#     i+=1
+# print("no more candy")
+
+# for i in range (1,101):
+#     if (i%3==0):
+#         continue
+#     print(i)
+# print("Finish")
+
+for i in range(1,101):
+    if i%2!=0:
+        continue # Or pass
+    else:
+        print(i)
+print("Finish")
+
+
