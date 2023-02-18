@@ -77,14 +77,24 @@
 #     print()
 
 # HOLLOW TRIANGLE STAR PATTERN
+# n=int(input())
+# for i in range (1,n+1):
+#     for j in range(i):
+#         if j == 0 or j == i-1:
+#             print("* ",end="")
+#         else:
+#             if i!=n:
+#                 print("  ",end="")
+#             else:
+#                 print("* ",end="")
+#     print()
+
+# PYRAMID STAR PATTERN
 n=int(input())
-for i in range (1,n+1):
-    for j in range(i):
-        if j == 0 or j == i-1:
-            print("* ",end="")
-        else:
-            if i!=n:
-                print("  ",end="")
-            else:
-                print("* ",end="")
+for i in range(1,n+1):
+    for j in range(n-i):
+        print(" ",end='')
+    for k in range(2*i-1):
+        print("*",end='')
     print()
+
