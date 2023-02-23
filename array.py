@@ -103,8 +103,37 @@ arr = array([1,3,4,5,2])
 # print(sort(arr))
 # print(concatenate([arr,arr1]))
 # arr1 = array([12,3,4,5,3])
-arr1 = arr.copy()
-print(arr)
-print(arr1)
-print(id(arr))
-print(id(arr1))
+# arr1 = arr.copy()
+# print(arr)
+# print(arr1)
+# print(id(arr))
+# print(id(arr1))
+
+arr = array([
+    [1,2,3],
+    [3,2,1]
+])
+# print(arr)
+# print(arr.dtype)
+# print(arr.shape)
+# print(arr.ndim)
+# arr2 = arr.flatten()
+# arr3 = arr.reshape(2,3)
+# print(arr3)
+# print(arr2)
+# print(arr.size)
+
+# **********
+# Matrices
+# **********
+
+m1= matrix('1 2 3 ;4 5 4; 3 2 6')
+# print(m)
+# print(m.diagonal())
+# print(m.min())
+# print(m.max())
+
+# m2 = matrix('1 3 2 ;4 5 5; 3 1 6')
+# m3 = m1 * m2;
+# print(m3)
+
