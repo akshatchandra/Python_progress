@@ -38,11 +38,25 @@
 # person(age=32,name='aks')
 # person('Aks',)
 # person('aks',31)
-def sum(a,* b):
-    # c = a + b
-    # print(c)
-    x = a
-    for i in b:
-        x = x + i
-    print(x)
-sum(1,3,2,1)
+# def sum(a,* b):
+#     # c = a + b
+#     # print(c)
+#     x = a
+#     for i in b:
+#         x = x + i
+#     print(x)
+# sum(1,3,2,1)
+
+
+def numpat(n):
+    num = 1
+    for i in range(0, n):
+        num = 1
+        for j in range(0, i + 1):
+            # printing number
+            print(num, end=" ")
+            num = num + 1
+        print("\r")
+
+n = 5
+numpat(n)
