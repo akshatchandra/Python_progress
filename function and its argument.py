@@ -82,13 +82,35 @@
 
 # Factorial
 
-def fact(n):
-    f=1
-    for i in range(1,n+1):
-        f = f * i
-    return f
-x = int(input())
-# x=4
+# def fact(n):
+#     f=1
+#     for i in range(1,n+1):
+#         f = f * i
+#     return f
+# x = int(input())
+# # x=4
+#
+# result = fact(x)
+# print(result)
 
-result = fact(x)
-print(result)
+# Recursion
+
+# Factorial using recursion
+#
+# def fact(n):
+#     if n==0:
+#         return 1
+#     return n * fact(n-1)
+#
+# result = fact(4)
+# print(result)
+
+# Anonymous Function or lambda function
+# f=lambda a : a*a
+# result = f(3)
+# print(result)
+
+def is_even
+    return
+nums = [2,3,4,1,5,6,]
+evens = list(filter(is_even,nums))
