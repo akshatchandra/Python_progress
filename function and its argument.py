@@ -110,7 +110,23 @@
 # result = f(3)
 # print(result)
 
-def is_even
-    return
-nums = [2,3,4,1,5,6,]
-evens = list(filter(is_even,nums))
+# def is_evens(n):
+#     if n%2==0:
+#         print(n,"even")
+#     else:
+#         print(n,'odd')
+
+
+from functools import reduce
+
+def add_all(a,b):
+    return a+b
+nums = [2,3,4,1,5,6]
+# evens = list(filter(is_evens,nums))
+# print(evens)
+
+evens = list(filter(lambda n : n%2==0,nums))
+add_2 = list(map(lambda n : n+2,evens))
+print(add_2)
+sum = reduce(lambda a,b:a+b,add_2)
+print(sum)
