@@ -21,7 +21,7 @@
 
 # Function to demonstrate printing pattern of alphabets
 
-
+#
 def contalpha(n):
     num = 65
     for i in range(0, n):
@@ -32,3 +32,8 @@ def contalpha(n):
         print("\r")
 n = 5
 contalpha(n)
+
+
+
+
+
