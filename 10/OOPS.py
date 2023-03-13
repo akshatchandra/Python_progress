@@ -91,39 +91,96 @@
 # 3> Static method
 
 
-class student:
-    school='xyz'
-    def __init__(self,m1,m2,m3):
-        self.m1=m1
-        self.m2=m2
-        self.m3=m3
+# class student:
+#     school='xyz'
+#     def __init__(self,m1,m2,m3):
+#         self.m1=m1
+#         self.m2=m2
+#         self.m3=m3
+#
+#     def avg(self):
+#         return (self.m1+self.m2+self.m3)/3
+#
+#     # def get_m1(self):
+#     #     return self.m1
+#     # def set_m1(self,value):
+#     #     self.m1=value
+#     @classmethod
+#     def getschool(cls):
+#         return cls.school
+#
+#     @staticmethod
+#     def info():
+#         print("abjnjcavovihohv")
+#
+# s1 = student(32,23,12)
+# s2 = student(23,11,21)
+#
+# print(s1.avg())
+# print(s2.avg())
+# print(student.info())
 
-    def avg(self):
-        return (self.m1+self.m2+self.m3)/3
+# Inner Class
 
-    # def get_m1(self):
-    #     return self.m1
-    # def set_m1(self,value):
-    #     self.m1=value
-    @classmethod
-    def getschool(cls):
-        return cls.school
+# class Student:
+#     def __init__(self,name,rollno):
+#         self.name = name
+#         self.rollno = rollno
+#         self.lap = self.Laptop()
+#
+#     def show(self):
+#         print(self.name , self.rollno)
+#         self.lap.show()
+#
+#     class Laptop:
+#         def __init__(self):
+#             self.model = 'HP'
+#             self.ram = 8
+#         def show(self):
+#             print(self.model,self.ram)
+#
+#
+# s1 = Student('Aks',2)
+# s2 = Student('zxc',3)
+#
+# # s1.show()
+# s2.show()
 
-    @staticmethod
-    def info():
-        print("abjnjcavovihohv")
-
-s1 = student(32,23,12)
-s2 = student(23,11,21)
-
-print(s1.avg())
-print(s2.avg())
-print(student.info())
 
 
 
+# Inheritance
+
+class A:
+    def feature1(self):
+        print("F1 working")
+    def feature2(self):
+        print("F2 working")
+
+class B(A):
+    def feature3(self):
+        print("F3 working")
+
+    def feature4(self):
+        print("F4 working")
+
+class D:
+    def feature6(self):
+        print("F6 working")
+
+class C(B,D):
+    def feature5(self):
+        print("F5 working")
 
 
+a1 = A()
+a1.feature2()
+a1.feature1()
+
+b1 = B()
+
+c1 = C()
+c1.feature6()
 
 
 
