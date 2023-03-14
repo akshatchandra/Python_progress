@@ -184,45 +184,95 @@
 
 
 
-# Constructor in inheritance
-class A:
-    def __init__(self):
-        print("in A init")
+# # Constructor in inheritance
+# class A:
+#     def __init__(self):
+#         print("in A init")
+#
+#     def feature1(self):
+#         print("Feature 1-A working")
+#
+#     def feature2(self):
+#         print("Feature 2 working")
+# # class B(A):
+# class B:
+#     def __init__(self):
+#         super().__init__()
+#         print("in B init")
+#
+#     def feature(self):
+#         print("Feature 1-B working")
+#
+#     def feature(self):
+#         print("Feature 4 working")
+#
+# class C(A,B):
+# # class C(B,A):
+#     def __init__(self):
+#         super().__init__()  # Mro: method resolution order (left to right)
+#         print("in C init")
+#
+#     def feat(self):
+#         super().feature2()
+# # a1 = A()
+# # a1 = B()
+# a1=C()
+# a1.feature1()
+# a1.feat()
 
-    def feature1(self):
-        print("Feature 1-A working")
+# Polymorphism
+# Duck typing
+# operator Overloading
+# method Overloading
+# method Overriding
 
-    def feature2(self):
-        print("Feature 2 working")
-# class B(A):
-class B:
-    def __init__(self):
-        super().__init__()
-        print("in B init")
+# Duck typing
+# class Pycharm:
+#     def execute(self):
+#         print("compiling")
+#         print("Running")
+# class MyEditor:
+#     def execute(self):
+#         print("Spell check")
+#         print("compiling")
+#         print("Running")
+# class Laptop:
+#     def code(self,ide):
+#         ide.execute()
+# # ide = Pycharm()
+# ide = MyEditor()
+# lap1=Laptop()
+# lap1.code(ide)
 
-    def feature(self):
-        print("Feature 1-B working")
+# Operator Overloading
+class Student:
+    def __init__(self,m1,m2):
+        self.m1 = m1
+        self.m2 = m2
+    def __add__(self,other):
+        m1 = self.m1 + other.m1
+        m2 = self.m2 + other.m2
+        s3 = Student(m1,m2)
 
-    def feature(self):
-        print("Feature 4 working")
+        return s3
 
-class C(A,B):
-# class C(B,A):
-    def __init__(self):
-        super().__init__()  # Mro: method resolution order (left to right)
-        print("in C init")
+    def __gt__(self, other):
+        r1 = self.m1 + self.m2
+        r2 = other.m1 + other.m2
+        if r1 > r2:
+            return True
+        else:
+            return False
 
-    def feat(self):
-        super().feature2()
-# a1 = A()
-# a1 = B()
-a1=C()
-a1.feature1()
-a1.feat()
+# s1 = Student(23,32)
+# s2 = Student(12,21)
+s1 = Student(23,32)
+s2 = Student(12,21)
+s3 = s1 + s2
+print(s3.m2)
+print(s3.m1)
 
-
-
-
-
-
-
+if s1 > s2:
+    print("s1 wins")g
+else:
+    print("s2 wins")
