@@ -150,39 +150,75 @@
 
 
 # Inheritance
+#
+# class A:
+#     def feature1(self):
+#         print("F1 working")
+#     def feature2(self):
+#         print("F2 working")
+#
+# class B(A):
+#     def feature3(self):
+#         print("F3 working")
+#
+#     def feature4(self):
+#         print("F4 working")
+#
+# class D:
+#     def feature6(self):
+#         print("F6 working")
+#
+# class C(B,D):
+#     def feature5(self):
+#         print("F5 working")
+#
+#
+# a1 = A()
+# a1.feature2()
+# a1.feature1()
+#
+# b1 = B()
+#
+# c1 = C()
+# c1.feature6()
 
+
+
+# Constructor in inheritance
 class A:
+    def __init__(self):
+        print("in A init")
+
     def feature1(self):
-        print("F1 working")
+        print("Feature 1-A working")
+
     def feature2(self):
-        print("F2 working")
+        print("Feature 2 working")
+# class B(A):
+class B:
+    def __init__(self):
+        super().__init__()
+        print("in B init")
 
-class B(A):
-    def feature3(self):
-        print("F3 working")
+    def feature(self):
+        print("Feature 1-B working")
 
-    def feature4(self):
-        print("F4 working")
+    def feature(self):
+        print("Feature 4 working")
 
-class D:
-    def feature6(self):
-        print("F6 working")
+class C(A,B):
+# class C(B,A):
+    def __init__(self):
+        super().__init__()  # Mro: method resolution order (left to right)
+        print("in C init")
 
-class C(B,D):
-    def feature5(self):
-        print("F5 working")
-
-
-a1 = A()
-a1.feature2()
+    def feat(self):
+        super().feature2()
+# a1 = A()
+# a1 = B()
+a1=C()
 a1.feature1()
-
-b1 = B()
-
-c1 = C()
-c1.feature6()
-
-
+a1.feat()
 
 
 
