@@ -301,14 +301,32 @@
 
 
 # method overriding:
-class A:
-    def show(self):
-        print("show a")
+# class A:
+#     def show(self):
+#         print("show a")
+#
+# class B(A):
+#     # pass
+#     def show(self):
+#         print("show b")
+# # a1=A()
+# a1=B()
+# a1.show()
 
-class B(A):
+# Abstract Class and abstract method ABC = abstract base classes
+from abc import ABC, abstractmethod
+class Computer(ABC):
+    @abstractmethod
+    def process(self):
+
+        # print("A")
+        pass
+
+class Laptop(Computer):
     # pass
-    def show(self):
-        print("show b")
-# a1=A()
-a1=B()
-a1.show()
+    def process(self):
+        print("its running")
+# a1=Computer()
+a1 = Laptop()
+# a1.process()
+a1.process()
