@@ -245,34 +245,70 @@
 # lap1.code(ide)
 
 # Operator Overloading
-class Student:
-    def __init__(self,m1,m2):
-        self.m1 = m1
-        self.m2 = m2
-    def __add__(self,other):
-        m1 = self.m1 + other.m1
-        m2 = self.m2 + other.m2
-        s3 = Student(m1,m2)
-
-        return s3
-
-    def __gt__(self, other):
-        r1 = self.m1 + self.m2
-        r2 = other.m1 + other.m2
-        if r1 > r2:
-            return True
-        else:
-            return False
-
+# class Student:
+#     def __init__(self,m1,m2):
+#         self.m1 = m1
+#         self.m2 = m2
+#     def __add__(self,other):
+#         m1 = self.m1 + other.m1
+#         m2 = self.m2 + other.m2
+#         s3 = Student(m1,m2)
+#
+#         return s3
+#
+#     def __gt__(self, other):
+#         r1 = self.m1 + self.m2
+#         r2 = other.m1 + other.m2
+#         if r1 > r2:
+#             return True
+#         else:
+#             return False
+#
+# # s1 = Student(23,32)
+# # s2 = Student(12,21)
 # s1 = Student(23,32)
 # s2 = Student(12,21)
-s1 = Student(23,32)
-s2 = Student(12,21)
-s3 = s1 + s2
-print(s3.m2)
-print(s3.m1)
+# s3 = s1 + s2
+# print(s3.m2)
+# print(s3.m1)
+#
+# if s1 > s2:
+#     print("s1 wins")g
+# else:
+#     print("s2 wins")
 
-if s1 > s2:
-    print("s1 wins")g
-else:
-    print("s2 wins")
+
+# Method Overloading and method overriding
+
+# class Student:
+#     def __init__(self,m1,m2):
+#         self.m1 = m1
+#         self.m2 = m2
+#
+#     def sum(self,a=None,b=None,c=None):
+#         if a!=None and b!=None and c!=None:
+#             s = a + b + c
+#         elif a!= None and b!=None:
+#             s = a + b
+#         else:
+#             s = a
+#         return s
+#
+# s1 = Student(12,21)
+# # print(s1.sum(22,44,21))
+# # print(s1.sum(22,21))
+# print(s1.sum(22))
+
+
+# method overriding:
+class A:
+    def show(self):
+        print("show a")
+
+class B(A):
+    # pass
+    def show(self):
+        print("show b")
+# a1=A()
+a1=B()
+a1.show()
