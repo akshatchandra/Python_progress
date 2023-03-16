@@ -314,19 +314,47 @@
 # a1.show()
 
 # Abstract Class and abstract method ABC = abstract base classes
-from abc import ABC, abstractmethod
-class Computer(ABC):
-    @abstractmethod
-    def process(self):
-
-        # print("A")
-        pass
-
-class Laptop(Computer):
-    # pass
-    def process(self):
-        print("its running")
-# a1=Computer()
-a1 = Laptop()
+# from abc import ABC, abstractmethod
+# class Computer(ABC):
+#     @abstractmethod
+#     def process(self):
+#
+#         # print("A")
+#         pass
+#
+# class Laptop(Computer):
+#     # pass
+#     def process(self):
+#         print("its running")
+# # a1=Computer()
+# a1 = Laptop()
+# # a1.process()
 # a1.process()
-a1.process()
+
+
+# Iterator
+num = [1,2,3,4]
+# for i in num:
+#      print(i)
+
+it =  iter(num)
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(it.__next__())
+# print(next(it))
+# for i in num:
+#     print(i)
+class top:
+    def __init__(self):
+        self.num = 1
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if se
+        val = self.num
+        self.num += 1
+        return val
+
+valus = top()
