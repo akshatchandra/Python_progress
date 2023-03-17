@@ -333,11 +333,11 @@
 
 
 # Iterator
-num = [1,2,3,4]
-# for i in num:
-#      print(i)
-
-it =  iter(num)
+# num = [1,2,3,4]
+# # for i in num:
+# #      print(i)
+#
+# it =  iter(num)
 # print(it.__next__())
 # print(it.__next__())
 # print(it.__next__())
@@ -346,15 +346,60 @@ it =  iter(num)
 # print(next(it))
 # for i in num:
 #     print(i)
-class top:
-    def __init__(self):
-        self.num = 1
-    def __iter__(self):
-        return self
-    def __next__(self):
-        if se
-        val = self.num
-        self.num += 1
-        return val
+# class top:
+#     def __init__(self):
+#         self.num = 1
+#     def __iter__(self):
+#         return self
+#     def __next__(self):
+#         if se
+#         val = self.num
+#         self.num += 1
+#         return val
+#
+# valus = top()
 
-valus = top()
+# Generators:
+# def topten():
+#     # yield 4
+#     # yield 3
+#     # yield 2
+#     # yield 1
+#     # yield 0
+#     n = 1
+#     while n <= 10:
+#         sq = n*n
+#         yield sq
+#         n+=1
+#
+# value = topten()
+# # print(value)
+# # print(value.__next__())
+# print(value.__next__())
+#
+# for i in value :
+#     print(i)
+
+
+# Exception Handling:
+
+a = 5
+# b = 2
+b=2
+try:
+    print("Resource open")
+    print(a/b)
+    # print("Resource closed")
+    k = int(input("Enter a number"))
+    print(k)
+# except Exception as a:
+except ZeroDivisionError as a:
+    print("Hey, you cannot divide a number by zero",a)
+    # print("Resource closed")
+# print("bye")
+except ValueError:
+    print("Invalid input")
+except Exception:
+    print("something went wrong")
+finally:
+    print("Resource closed")
