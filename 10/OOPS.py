@@ -430,3 +430,19 @@
 # t2.join()
 # print("Done")
 
+
+# File Handling
+
+f = open("MyData","r")
+# print(f)
+# print(f.read())
+# print(f.readline(),end="")
+# print(f.readline(4),end="")
+# f1 = open("abc","w")
+f1 =  open("abc","a")
+f1.write("and")
+f1.write("we can write 2")
+# for data in f:
+#     print(data)
+for data in f:
+    f1.write(data)
