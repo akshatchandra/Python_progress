@@ -383,23 +383,50 @@
 
 # Exception Handling:
 
-a = 5
-# b = 2
-b=2
-try:
-    print("Resource open")
-    print(a/b)
-    # print("Resource closed")
-    k = int(input("Enter a number"))
-    print(k)
-# except Exception as a:
-except ZeroDivisionError as a:
-    print("Hey, you cannot divide a number by zero",a)
-    # print("Resource closed")
-# print("bye")
-except ValueError:
-    print("Invalid input")
-except Exception:
-    print("something went wrong")
-finally:
-    print("Resource closed")
+# a = 5
+# # b = 2
+# b=2
+# try:
+#     print("Resource open")
+#     print(a/b)
+#     # print("Resource closed")
+#     k = int(input("Enter a number"))
+#     print(k)
+# # except Exception as a:
+# except ZeroDivisionError as a:
+#     print("Hey, you cannot divide a number by zero",a)
+#     # print("Resource closed")
+# # print("bye")
+# except ValueError:
+#     print("Invalid input")
+# except Exception:
+#     print("something went wrong")
+# finally:
+#     print("Resource closed")
+
+
+# Multithreading
+# from time import sleep
+# from threading import *
+# class Hello(Thread):
+#     def run(self):
+#         for i in range(4):
+#             print("Hello")
+#             sleep(1)
+#
+# class Hi(Thread):
+#     def run(self):
+#         for i in range(4):
+#             print("Hi")
+#             sleep(1)
+# t1 = Hello()
+# t2 = Hi()
+#
+# t1.start()
+# sleep(0.2)
+# t2.start()
+#
+# t1.join()
+# t2.join()
+# print("Done")
+
