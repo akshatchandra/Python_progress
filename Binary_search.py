@@ -25,26 +25,39 @@
 
 # Binary Search
 
-def search(list, n):
-    l = 0
-    u = len(list)-1
+# def search(list, n):
+#     l = 0
+#     u = len(list)-1
+#
+#     while l <= u:
+#         mid  = (l+u) // 2
+#
+#         if list[mid]==n:
+#             globals()['pos']=mid
+#             return True
+#         else:
+#             if list[mid]<n:
+#                 l = mid+1;
+#             else:
+#                 u = mid-1;
+#     return False
+# list = [4,7,8,12,45,99]
+# # n = 4
+# n=9
+# if search(list,n):
+#     print("Found at",pos+1)
+# else:
+#     print("Not Found")
 
-    while l <= u:
-        mid  = (l+u) // 2
+# Bubble Sort:
+def sort(nums):
+    for i in range(len(nums)-1,0,-1):
+        for j in range(i):
+            if nums[j] > nums[j+1]:
+                temp = nums[j]
+                nums[j] = nums[j+1]
+                nums[j+1] = temp
 
-        if list[mid]==n:
-            globals()['pos']=mid
-            return True
-        else:
-            if list[mid]<n:
-                l = mid+1;
-            else:
-                u = mid-1;
-    return False
-list = [4,7,8,12,45,99]
-# n = 4
-n=9
-if search(list,n):
-    print("Found at",pos+1)
-else:
-    print("Not Found")
+nums = [5,3,8,6,7,2]
+sort(nums)
+print(nums)
